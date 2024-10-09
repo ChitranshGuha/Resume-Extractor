@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resultstyles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Extraction Complete</h1>
+            <p>Your data has been extracted successfully. <a href="{{ excel_file }}">Click here to download the Excel file.</a></p>
+        </div>
+    </div>
+</body>
+</html>

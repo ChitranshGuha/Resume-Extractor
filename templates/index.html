@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Resume Extractor</h1>
+            <p class="subtitle">Easily extract information from your resumes</p>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="resumes" multiple>
+                    <button type="submit">Upload</button>
+                </form> -->
+                <label for="file-upload" class="custom-file-upload">
+                    Choose Files
+                </label>
+                <input id="file-upload" type="file" name="files" multiple onchange="showFileNames()">
+                <ul id="file-list" class="file-list"></ul> 
+                <input type="submit" value="Upload Resumes">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showFileNames() {
+            const input = document.getElementById('file-upload');
+            const fileList = document.getElementById('file-list');
+            fileList.innerHTML = ''; // Clear previous file names
+
+            for (let i = 0; i < input.files.length; i++) {
+                const file = input.files[i];
+                const listItem = document.createElement('li');
+                listItem.textContent = file.name; // Display file name
+                fileList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -32,8 +32,8 @@ resume-parser/
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/resume-parser.git
-    cd resume-parser
+    git clone https://github.com/ChitranshGuha/Resume-Extractor.git
+    cd Resume-Extractor
     ```
 
 2. Install the required dependencies:

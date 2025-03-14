@@ -26,9 +26,6 @@ resume-parser/
 │
 ├── resumes/                 # Folder where uploaded resumes will be stored (PDF files)
 ├── resume_data.xlsx         # Output file where extracted resume data is saved in Excel format
-├── README.md                # Project documentation (this file)
-├── requirements.txt         # List of dependencies for the project
-└── utils.py                 # Helper functions for processing resumes (optional)
 ```
 
 ## Installation
